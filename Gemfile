@@ -18,6 +18,8 @@ gem "sqlite3", "~> 1.4"
 # password authentication gem
 gem 'bcrypt'
 
+# Building UI Components
+gem "railsui", github: "getrailsui/railsui"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
