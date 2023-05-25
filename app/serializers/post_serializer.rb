@@ -1,4 +1,5 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :title, :content
-  has_one :topic
+  attributes :id, :title, :content, :created_at, :topic
+
+  belongs_to :topic, serializer: PostTopicSerializer
 end
