@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "DELETING ALL DATABASE ENTRIES"
+
+
+fiction = Topic.create(name: 'fiction')
+philosophy = Topic.create(name: 'Philosophy')
+reading = Topic.create(name: 'Reading')
+reviews = Topic.create(name: 'Book Reviews')
+tech = Topic.create(name: 'Tech & Programming')
