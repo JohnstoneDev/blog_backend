@@ -9,13 +9,13 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		render json: find_post(params[:id]), status: :ok
+		render json: find_post, status: :ok
 	end
 
 	def update
-		post = find_post(params[:id])
-		post.update!(post_params)
-		render json: post, status: :ok
+		post = find_post
+		post.update!(update_post_params)
+		render json: post, status: :accepted
 	end
 
 
@@ -25,7 +25,11 @@ class PostsController < ApplicationController
 		params.permit(:title, :content, :story_summary, :topic_id)
 	end
 
-	def find_post id
-		post = Post.find(id)
+	def find_post
+		post = Post.find_by(id: params[:id])
 	end
+
+	def update_post_params
+		params.permit(:story_summary, :title, :content)
+	end 
 end
