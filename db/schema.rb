@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_24_205931) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_26_120413) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.integer "topic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "story_summary"
     t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 
