@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
     def index
-        render json: { message: "Rails API for my personal Blog" }
+        render json: { message: "Connected to the API"}, status: :ok
     end
 
 
