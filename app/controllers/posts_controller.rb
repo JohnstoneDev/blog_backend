@@ -3,10 +3,15 @@ class PostsController < ApplicationController
 		render json: Post.all
 	end
 
+	def create
+		post = Post.create!(post_params)
+		render json: post, status: :created
+	end
 
-	private 
+
+	private
 
 	def post_params
-		params.require(:title, :content).permit(:title, :content)
-	end 
+		params.permit(:title, :content, :topic_id)
+	end
 end
