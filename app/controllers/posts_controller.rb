@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 	private
 
 	def post_params
-		params.permit(:title, :content, :topic_id)
+		params.permit(:title, :content, :story_summary, :topic_id)
 	end
 
 	def find_post id
