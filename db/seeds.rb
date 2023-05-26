@@ -21,10 +21,10 @@ sleep(2);
 
 puts "Creating Posts"
 
-hamlet = Post.create(title: "Review of Hamlet", content: "The tragedy of Hamlet, prince of Denmark", topic_id: reviews.id)
-tides = Post.create(title: "Tides of Sorrow", content: "Story for another day", topic_id: philosophy.id)
-typescript = Post.create(title: "Typescript", content: "My thought on typescript", topic_id: tech.id)
-camus = Post.create(title: "Albert Camus", content: "The outsider & The Stranger", topic_id: reading.id)
-house = Post.create(title: "House of the Dragon", content: "Fire & Blood", topic_id: fiction.id)
+hamlet = Post.create(title: "Review of Hamlet", content: "The tragedy of Hamlet, prince of Denmark", story_summary: "A Sample story summary", topic_id: reviews.id)
+tides = Post.create(title: "Tides of Sorrow", content: "Story for another day", story_summary: "A Sample story summary", topic_id: philosophy.id)
+typescript = Post.create(title: "Typescript", content: "My thought on typescript", story_summary: "A Sample story summary", topic_id: tech.id)
+camus = Post.create(title: "Albert Camus", content: "The outsider & The Stranger", story_summary: "A Sample story summary", topic_id: reading.id)
+house = Post.create(title: "House of the Dragon", content: "Fire & Blood", story_summary: "A Sample story summary", topic_id: fiction.id)
 
 puts "Finished creating Posts"
