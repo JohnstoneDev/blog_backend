@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
     rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
     def index
-        render json: { message: "Connected to the API"}, status: :ok
+        render json: { message: "THE MERMAID TARVERN"}, status: :ok
     end
 
 
